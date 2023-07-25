@@ -33,6 +33,26 @@ const data = (ArrRockets) => {
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
+  reducers: {
+    bookRocket: (state, action) => {
+      const reserve = state.arrRock.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return { ...rocket, reserve: true };
+        }
+        return rocket;
+      });
+      state.arrRock = reserve;
+    },
+    cancelRocket: (state, action) => {
+      const cancelation = state.arrRock.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return { ...rocket, reserve: false };
+        }
+        return rocket;
+      });
+      state.arrRock = cancelation;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getRockets.fulfilled, (state, action) => {
@@ -42,4 +62,5 @@ const rocketsSlice = createSlice({
   },
 });
 
+export const { bookRocket, cancelRocket } = rocketsSlice.actions;
 export default rocketsSlice.reducer;
