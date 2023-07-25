@@ -1,14 +1,14 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchMissions } from '../Redux/missions/MissionsSlice';
 import PropTypes from 'prop-types';
+import { fetchMissions } from '../Redux/missions/MissionsSlice';
 
 function Missions({ missions }) {
   const dispatch = useDispatch();
   // const missions = useSelector(missions);
 
   useEffect(() => {
-    if (missions.status === 'idle') {
+    if (missions === 'idle') {
       dispatch(fetchMissions());
     }
   }, [dispatch]);
