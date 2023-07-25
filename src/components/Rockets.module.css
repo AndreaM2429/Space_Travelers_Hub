@@ -30,7 +30,30 @@
   gap: 15px;
 }
 
-.rocket_container button {
+.btn_cancel {
+  width: 150px;
+  height: 35px;
+  border: 2px solid #c4c7ca;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #8b9198;
+  font-weight: 600;
+}
+
+.reserve_span {
+  display: inline-flex;
+  justify-content: center;
+  background-color: #18a2b8;
+  border-radius: 3px;
+  font-size: 12px;
+  width: 65px;
+  height: 22px;
+  align-items: center;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.btn_book {
   width: 120px;
   height: 35px;
   border: none;
