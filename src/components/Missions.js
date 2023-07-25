@@ -1,42 +1,25 @@
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import { fetchMissions } from '../Redux/missions/MissionsSlice';
 
-function Missions({ missions }) {
+function Missions() {
   const dispatch = useDispatch();
-  // const missions = useSelector(missions);
-
   useEffect(() => {
-    if (missions === 'idle') {
-      dispatch(fetchMissions());
-    }
+    dispatch(fetchMissions());
   }, [dispatch]);
 
+  const { missions } = useSelector((state) => state.missions);
   return (
     <>
-      <div>
-        <table>
-          <tr>
-            <td>Mission</td>
-            <td>Description</td>
-            <td>Status</td>
-            <td> </td>
+      <tbody>
+        {missions.map((mission) => (
+          <tr key={mission.mission_id}>
+            <td>{mission.mission_name}</td>
+            <td>{mission.description}</td>
           </tr>
-          <tr>
-            <td>Mission</td>
-            <td>Description</td>
-            <td>
-              <button type="button">NOT A MEMBER</button>
-              <button type="button">Active Member</button>
-            </td>
-            <td>
-              <button type="button">Join Mission</button>
-              <button type="button">Leave Missionr</button>
-            </td>
-          </tr>
-        </table>
-      </div>
+        ))}
+      </tbody>
     </>
   );
 }

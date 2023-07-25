@@ -7,7 +7,6 @@ export const fetchMissions = createAsyncThunk(
   async () => {
     try {
       const response = await fetch(url);
-      console.log(response);
       return response.json() || [];
     } catch (error) {
       return 'There was an error and no missions were returned';
@@ -18,7 +17,19 @@ export const fetchMissions = createAsyncThunk(
 const initialState = {
   missions: [],
   status: 'idle',
-  error: null,
+};
+
+const data = (missions) => {
+  const missionsList = [];
+  missions.forEach((mission) => {
+    missionsList.push({
+      mission_id: mission.mission_id,
+      mission_name: mission.mission_name,
+      description: mission.description,
+    });
+    return missionsList;
+  });
+  return missionsList;
 };
 
 const missionsSlice = createSlice({
@@ -32,8 +43,7 @@ const missionsSlice = createSlice({
       })
       .addCase(fetchMissions.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.missions = action.payload;
-        console.log(state.missions);
+        state.missions = data(action.payload);
       })
       .addCase(fetchMissions.rejected, (state, action) => {
         state.status = 'failed';

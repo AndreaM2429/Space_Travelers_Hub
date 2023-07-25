@@ -1,9 +1,9 @@
-import Missions from '../components/Missions';
+import MissionsContainer from '../components/MissionContainer';
 
 function MissionsPage() {
   return (
     <>
-      <Missions />
+      <MissionsContainer />
     </>
   );
 }
