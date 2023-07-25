@@ -8,7 +8,6 @@ import RocketsPage from './routes/RocketsPage';
 import { getRockets } from './Redux/rockets/RocketsSlice';
 import MissionsPage from './routes/MissionsPage';
 
-
 function App() {
   const dispatch = useDispatch();
 
