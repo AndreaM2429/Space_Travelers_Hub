@@ -6,6 +6,8 @@ import ProfilePage from './routes/ProfilePage';
 import './App.css';
 import RocketsPage from './routes/RocketsPage';
 import { getRockets } from './Redux/rockets/RocketsSlice';
+import MissionsPage from './routes/MissionsPage';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<RocketsPage />} />
+          <Route path="/Missions" element={<MissionsPage />} />
           <Route path="/Myprofile" element={<ProfilePage />} />
         </Route>
       </Routes>
