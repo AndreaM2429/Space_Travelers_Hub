@@ -12,10 +12,9 @@ function Missions() {
     }
   }, [dispatch]);
 
-  const handleJoinMission = (event) => {
-    console.log(event);
-    const missionId = event.target.value;
-    dispatch(joinMission(missionId));
+  const handleJoinMission = (id) => {
+    console.log(id);
+    dispatch(joinMission(id));
   };
 
   return (
@@ -29,7 +28,7 @@ function Missions() {
               <button type="button">NOT A MEMBER</button>
             </td>
             <td>
-              <button onClick={handleJoinMission} type="button">
+              <button onClick={() => handleJoinMission(mission.mission_id)} type="button">
                 Join Mission
               </button>
             </td>
