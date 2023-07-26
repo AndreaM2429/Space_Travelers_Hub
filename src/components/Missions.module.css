@@ -1,0 +1,22 @@
+.table_row {
+  border: 1px solid #eee;
+}
+
+.table_row:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.table_row td {
+  border: 1px solid #dadada;
+}
+
+.table_row_mission_name {
+  font-weight: 700;
+  font-size: larger;
+}
+
+.table_row_mission_description {
+  font-weight: 200;
+  font-size: 0.8rem;
+  padding: 8px;
+}

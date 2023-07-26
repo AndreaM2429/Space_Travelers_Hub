@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchMissions, joinMission } from '../Redux/missions/MissionsSlice';
+import styles from './Missions.module.css';
 
 function Missions() {
   const { missions } = useSelector((state) => state.missions);
@@ -21,9 +22,9 @@ function Missions() {
     <>
       <tbody>
         {missions.map((mission) => (
-          <tr key={mission.mission_id}>
-            <td>{mission.mission_name}</td>
-            <td>{mission.description}</td>
+          <tr key={mission.mission_id} className={styles.table_row}>
+            <td className={styles.table_row_mission_name}>{mission.mission_name}</td>
+            <td className={styles.table_row_mission_description}>{mission.description}</td>
             <td>
               <button type="button">NOT A MEMBER</button>
             </td>

@@ -27,6 +27,7 @@ const data = (missions) => {
       mission_id: mission.mission_id,
       mission_name: mission.mission_name,
       description: mission.description,
+      reserve: false,
     });
     return missionsList;
   });
@@ -40,11 +41,22 @@ const missionsSlice = createSlice({
     joinMission: (state, action) => {
       const joinMission = state.missions.map((mission) => {
         if (mission.mission_id === action.payload) {
+          console.log(action);
           return { ...mission, reserve: true };
         }
         return mission;
       });
+      console.log(joinMission);
       state.missions = joinMission;
+    },
+    cancelMission: (state, action) => {
+      const cancelMission = state.missions.map((mission) => {
+        if (mission.mission_id === action.payload && mission.state.reserve === true) {
+          return { ...mission, reserve: false };
+        }
+        return mission;
+      });
+      state.missions = cancelMission;
     },
   },
   extraReducers(builder) {

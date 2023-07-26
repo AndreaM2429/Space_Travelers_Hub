@@ -1,0 +1,29 @@
+.table {
+  margin:12px 3% 0 3%;
+  border: 1px solid #dadada;
+  border-collapse: collapse;
+}
+
+.table_titles {
+  font-weight: 500;
+}
+
+.table_title_mission {
+  width: 12.5%;
+  border: 1px solid #dadada;
+}
+
+.table_title_description {
+  width: 65%;
+  border: 1px solid #dadada;
+}
+
+.table_title_status {
+  width: 10%;
+  border: 1px solid #dadada;
+}
+
+.table_title_empty {
+  width: 12.5%;
+  border: 1px solid #dadada;
+}
