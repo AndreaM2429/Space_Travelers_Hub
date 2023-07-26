@@ -17,7 +17,7 @@ export const fetchMissions = createAsyncThunk(
 const initialState = {
   missions: [],
   status: 'idle',
-  // reserved: false,
+  reserved: false,
 };
 
 const data = (missions) => {
@@ -27,7 +27,6 @@ const data = (missions) => {
       mission_id: mission.mission_id,
       mission_name: mission.mission_name,
       description: mission.description,
-      reserve: false,
     });
     return missionsList;
   });
