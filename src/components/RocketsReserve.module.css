@@ -1,0 +1,26 @@
+.profile_container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 20px;
+  text-align: left;
+}
+
+.title_reserve {
+  width: 95%;
+}
+
+.title_reserve li {
+  list-style: none;
+  border: 2px solid #e4e4e4;
+  width: 100%;
+  height: 80px;
+  padding: 15px 0 0 15px;
+  text-align: left;
+  font-size: 22px;
+}
+
+.title_reserve h2 {
+  font-size: 33px;
+  padding: 25px 0 10px 0;
+}
