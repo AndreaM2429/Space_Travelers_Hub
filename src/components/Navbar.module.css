@@ -40,7 +40,7 @@
   font-weight: 600;
 }
 
-.navbar_links li a:active {
+.navbar_links li a.active {
   text-decoration: underline;
 }
 

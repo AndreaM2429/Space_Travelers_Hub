@@ -1,25 +1,29 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import navbarlogo from '../Assets/planet_logo_navbar.png';
 
 function Navbar() {
+  const currentLink = ({ isActive }) => {
+    if (isActive) return styles.active;
+    return null;
+  };
   return (
     <>
       <div className={styles.nav_container}>
         <div className={styles.tittle_page}>
           <img src={navbarlogo} alt="logo" />
-          <Link to="/"><h1>Space Travelers&apos; Hub</h1></Link>
+          <NavLink to="/"><h1>Space Travelers&apos; Hub</h1></NavLink>
         </div>
         <ul className={styles.navbar_links}>
           <li>
-            <Link to="/">Rokets</Link>
+            <NavLink className={currentLink} to="/">Rokets</NavLink>
           </li>
           <li>
-            <Link to="/Missions">Mission</Link>
+            <NavLink className={currentLink} to="/Missions">Mission</NavLink>
           </li>
           <li className={styles.separator}>&#124;</li>
           <li>
-            <Link to="/Myprofile">My Profile</Link>
+            <NavLink className={currentLink} to="/Myprofile">My Profile</NavLink>
           </li>
         </ul>
       </div>
