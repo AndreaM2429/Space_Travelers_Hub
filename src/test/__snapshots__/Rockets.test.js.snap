@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets component render correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        class="rocket_container"
+      >
+        <ul>
+          <li>
+            <img
+              alt="falcon1"
+              src="https://imgur.com/DaCfMsj.jpg"
+            />
+            <div>
+              <h2>
+                Falcon 1
+              </h2>
+              <span>
+                The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.
+              </span>
+              <button
+                class="btn_book"
+                type="button"
+              >
+                Reserve Rocket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img
+              alt="falcon9"
+              src="https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg"
+            />
+            <div>
+              <h2>
+                Falcon 9
+              </h2>
+              <span>
+                Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites and the Dragon spacecraft into orbit.
+              </span>
+              <button
+                class="btn_book"
+                type="button"
+              >
+                Reserve Rocket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img
+              alt="falconheavy"
+              src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg"
+            />
+            <div>
+              <h2>
+                Falcon Heavy
+              </h2>
+              <span>
+                With the ability to lift into orbit over 54 metric tons (119,000 lb)--a mass equivalent to a 737 jetliner loaded with passengers, crew, luggage and fuel--Falcon Heavy can lift more than twice the payload of the next closest operational vehicle, the Delta IV Heavy, at one-third the cost.
+              </span>
+              <button
+                class="btn_book"
+                type="button"
+              >
+                Reserve Rocket
+              </button>
+            </div>
+          </li>
+          <li>
+            <img
+              alt="starship"
+              src="https://live.staticflickr.com/65535/48954138962_ee541e6755_b.jpg"
+            />
+            <div>
+              <h2>
+                Starship
+              </h2>
+              <span>
+                Starship and Super Heavy Rocket represent a fully reusable transportation system designed to service all Earth orbit needs as well as the Moon and Mars. This two-stage vehicle — composed of the Super Heavy rocket (booster) and Starship (ship) — will eventually replace Falcon 9, Falcon Heavy and Dragon.
+              </span>
+              <button
+                class="btn_book"
+                type="button"
+              >
+                Reserve Rocket
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      class="rocket_container"
+    >
+      <ul>
+        <li>
+          <img
+            alt="falcon1"
+            src="https://imgur.com/DaCfMsj.jpg"
+          />
+          <div>
+            <h2>
+              Falcon 1
+            </h2>
+            <span>
+              The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.
+            </span>
+            <button
+              class="btn_book"
+              type="button"
+            >
+              Reserve Rocket
+            </button>
+          </div>
+        </li>
+        <li>
+          <img
+            alt="falcon9"
+            src="https://farm1.staticflickr.com/929/28787338307_3453a11a77_b.jpg"
+          />
+          <div>
+            <h2>
+              Falcon 9
+            </h2>
+            <span>
+              Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites and the Dragon spacecraft into orbit.
+            </span>
+            <button
+              class="btn_book"
+              type="button"
+            >
+              Reserve Rocket
+            </button>
+          </div>
+        </li>
+        <li>
+          <img
+            alt="falconheavy"
+            src="https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg"
+          />
+          <div>
+            <h2>
+              Falcon Heavy
+            </h2>
+            <span>
+              With the ability to lift into orbit over 54 metric tons (119,000 lb)--a mass equivalent to a 737 jetliner loaded with passengers, crew, luggage and fuel--Falcon Heavy can lift more than twice the payload of the next closest operational vehicle, the Delta IV Heavy, at one-third the cost.
+            </span>
+            <button
+              class="btn_book"
+              type="button"
+            >
+              Reserve Rocket
+            </button>
+          </div>
+        </li>
+        <li>
+          <img
+            alt="starship"
+            src="https://live.staticflickr.com/65535/48954138962_ee541e6755_b.jpg"
+          />
+          <div>
+            <h2>
+              Starship
+            </h2>
+            <span>
+              Starship and Super Heavy Rocket represent a fully reusable transportation system designed to service all Earth orbit needs as well as the Moon and Mars. This two-stage vehicle — composed of the Super Heavy rocket (booster) and Starship (ship) — will eventually replace Falcon 9, Falcon Heavy and Dragon.
+            </span>
+            <button
+              class="btn_book"
+              type="button"
+            >
+              Reserve Rocket
+            </button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
