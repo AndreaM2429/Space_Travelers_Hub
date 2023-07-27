@@ -12,7 +12,7 @@ function RocketCard({ ArrRocket }) {
         <h2>{ArrRocket.name}</h2>
         <span>
           {
-            (ArrRocket.reserve) ? <span className={styles.reserve_span}>Reserved</span> : null
+            (ArrRocket.reserve) ? <span title="reserved" className={styles.reserve_span}>Reserved</span> : null
           }
           {ArrRocket.description}
         </span>
