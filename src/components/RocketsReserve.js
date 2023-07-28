@@ -6,11 +6,8 @@ function RocketReserve() {
     <>
       <h2>My Rockets</h2>
       <ul>
-        {arrRock.map((rocket) => (
-          (rocket.reserve)
-            ? (
-              <li key={rocket.id}><span>{rocket.name}</span></li>
-            ) : null
+        {arrRock.filter((rockets) => rockets.reserve).map((rocket) => (
+          <li title={rocket.name} key={rocket.id}><span>{rocket.name}</span></li>
         ))}
       </ul>
     </>
