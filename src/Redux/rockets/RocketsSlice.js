@@ -16,17 +16,13 @@ export const getRockets = createAsyncThunk('get/rockets', async (thunkAPI) => {
   }
 });
 
-const data = (ArrRockets) => {
-  const rockets = [];
-  ArrRockets.map((rocket) => {
-    rockets.push({
-      id: rocket.rocket_id,
-      name: rocket.rocket_name,
-      description: rocket.description,
-      image: rocket.flickr_images[0],
-    });
-    return rockets;
-  });
+const rocketMapper = (ArrRockets) => {
+  const rockets = ArrRockets.map((rocket) => ({
+    id: rocket.rocket_id,
+    name: rocket.rocket_name,
+    description: rocket.description,
+    image: rocket.flickr_images[0],
+  }));
   return rockets;
 };
 
@@ -56,7 +52,7 @@ const rocketsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getRockets.fulfilled, (state, action) => {
-        const newdata = data(action.payload);
+        const newdata = rocketMapper(action.payload);
         state.arrRock = newdata;
       });
   },
