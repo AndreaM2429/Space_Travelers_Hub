@@ -20,16 +20,12 @@ const initialState = {
   reserved: false,
 };
 
-const data = (missions) => {
-  const missionsList = [];
-  missions.forEach((mission) => {
-    missionsList.push({
-      mission_id: mission.mission_id,
-      mission_name: mission.mission_name,
-      description: mission.description,
-    });
-    return missionsList;
-  });
+const missionMapper = (missions) => {
+  const missionsList = missions.map((mission) => ({
+    mission_id: mission.mission_id,
+    mission_name: mission.mission_name,
+    description: mission.description,
+  }));
   return missionsList;
 };
 
@@ -64,7 +60,7 @@ const missionsSlice = createSlice({
       })
       .addCase(fetchMissions.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.missions = data(action.payload);
+        state.missions = missionMapper(action.payload);
       })
       .addCase(fetchMissions.rejected, (state, action) => {
         state.status = 'failed';
